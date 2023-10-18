@@ -11,6 +11,32 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'registros',
+    loadChildren: () => import('./pages/registros/registros.module').then( m => m.RegistrosPageModule)
+  },
+  {
+    path: 'descarga',
+    loadChildren: () => import('./pages/descarga/descarga.module').then( m => m.DescargaPageModule)
+  },
+
+  // {
+  //   path: '',
+  //   redirectTo: 'welcome', // Ruta por defecto
+  //   pathMatch: 'full'
+  // },
 ];
 
 @NgModule({
